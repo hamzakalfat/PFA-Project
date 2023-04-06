@@ -7,7 +7,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     routes: {
       '/loginScreen':(context) => LoginScreen(),
-      // chehya tayba
+
     },
   ));
 }
