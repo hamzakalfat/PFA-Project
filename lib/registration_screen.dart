@@ -1,4 +1,4 @@
-import 'package:untitled/home_screen.dart';
+                                                                                  import 'package:untitled/home_screen.dart';
 import 'package:untitled/login_screen.dart';
 import 'package:flutter/material.dart';
 class RegistrationScreen extends StatefulWidget {
@@ -108,7 +108,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
