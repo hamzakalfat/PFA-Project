@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/constants.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled/screens/main/main_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -9,12 +13,16 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      //hello
-      appBar: AppBar(
-        title: Text('Home Page'),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false ,
+      title: "TrashTracker Panel",
+      theme : ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: bgColor,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white),
+        canvasColor: secondaryColor,
       ),
-      drawer: Drawer()
+      home: MainScreen(),
     );
   }
 }
