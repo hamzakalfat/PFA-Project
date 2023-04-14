@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:untitled/constants.dart';
 
+import 'components/header.dart';
+
 class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,39 +13,29 @@ class DashboardScreen extends StatelessWidget {
         padding: EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
+            Header(),
+            SizedBox(height: defaultPadding),
             Row(
               children: [
-                Text (
-                  "Dashboard",
-                  style: Theme.of(context).textTheme.headline6,
-                ),
-                Spacer(),
-                Expanded(
-                    child: TextField (
-                      decoration: InputDecoration(
-                          fillColor: secondaryColor,
-                          filled: true,
-                          border: OutlineInputBorder (
-                            borderSide: BorderSide.none,
-                            borderRadius:
-                                 const BorderRadius.all(Radius.circular(10)),
-
-                          ),
-                        suffixIcon: Container(
-                            padding: EdgeInsets.all(defaultPadding*0.75),
-                            decoration: BoxDecoration(
-                                color: primaryColor,
-                            ),
-                          child: SvgPicture.asset ("assets/icons/search-right-1507-svgrepo-com.svg")
-                      ),
-
-                      ),
-                    )
-                )
-          ],
-        ),
-      ],
-      ),
+              Expanded(
+                flex: 5,
+                child: Container(
+                  height: 500,
+                  color: Colors.white,
+              ),
+            ),
+            SizedBox(width: defaultPadding),
+            Expanded(
+              flex: 2,
+              child: Container(
+                height: 500,
+                //decoration: BoxDecoration(color: secondaryColor, borderRadius: Border),
+              )
+    ),
+    ],
+    ),
+        ]
+    ),
     ),
     );
   }

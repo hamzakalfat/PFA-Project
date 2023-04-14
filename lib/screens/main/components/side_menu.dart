@@ -13,7 +13,7 @@ class SideMenu extends StatelessWidget {
         child: Column(
           children: [
             DrawerHeader(
-              child: Image.asset("assets/images/iStock-trash.jpg"),
+              child: Image.asset("assets/iStock-trash.jpg"),
             ),
             DrawerListeTitle(
               title:"Dashboard",
