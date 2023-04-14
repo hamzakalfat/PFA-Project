@@ -1,7 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:untitled/HomeScreen1.dart';
 import 'package:untitled/registration_screen.dart';
 
 import 'package:untitled/home_screen.dart';
+
+import 'constants.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -15,14 +20,20 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+
       appBar: AppBar(
-        title: const Text("TrashTracker "),
+        title: const Text("Zero Waste ", style: TextStyle(
+          color: Colors.red,
+        ),),
+        backgroundColor: bgColor,
       ),
       body: Center(
+
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+
               SizedBox(
                 height: 180,
                 child: Image.asset(
@@ -68,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => HomeScreen()));
+                          builder: (context) => HomeScreen1()));
 
                 },
                 color: Colors.red,
