@@ -22,7 +22,9 @@ class _LoginScreenState extends State<LoginScreen> {
       resizeToAvoidBottomInset: false,
 
       appBar: AppBar(
-        title: const Text("TrashTracker "),
+        title: const Text("Zero Waste ", style: TextStyle(
+          color: Colors.red,
+        ),),
         backgroundColor: bgColor,
       ),
       body: Center(

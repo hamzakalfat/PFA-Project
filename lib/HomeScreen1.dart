@@ -18,7 +18,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
       debugShowCheckedModeBanner: false ,
       title: "mes dechets",
       theme : ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: bgColor,
+        scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
