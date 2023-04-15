@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:untitled/HomeScreen1.dart';
+
 import 'package:untitled/registration_screen.dart';
 
 import 'package:untitled/home_screen.dart';
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => HomeScreen1()));
+                          builder: (context) => HomeScreen()));
 
                 },
                 color: Colors.red,
