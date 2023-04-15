@@ -8,11 +8,11 @@ class StorageInfoCard extends StatelessWidget{
   const StorageInfoCard ({
     Key? key ,
     required this.title,
-    required this.svgSrc,
+
 
 
   }) : super(key: key);
-  final String title, svgSrc ;
+  final String title ;
 
 
   @override
@@ -29,7 +29,7 @@ class StorageInfoCard extends StatelessWidget{
       ),
       child: Row(
         children: [
-          SizedBox(height: 20, width: 20, child: SvgPicture.asset(svgSrc),),
+          SizedBox(height: 10, width: 10, ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding,),

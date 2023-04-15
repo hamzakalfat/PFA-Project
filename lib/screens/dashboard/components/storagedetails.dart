@@ -27,16 +27,16 @@ class storagedetails extends StatelessWidget{
           ),
           Chart(),
           StorageInfoCard(
-            title: "plastic", svgSrc: '',
+            title: "plastic",
           ),
           StorageInfoCard(
-            title: "paper", svgSrc: '',
+            title: "paper",
           ),
           StorageInfoCard(
-            title: "battery", svgSrc: '',
+            title: "battery",
           ),
           StorageInfoCard(
-            title: "organic matter", svgSrc: '',
+            title: "organic matter",
           ),
         ],
       ),
