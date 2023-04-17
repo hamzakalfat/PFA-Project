@@ -28,7 +28,7 @@ class Mywaste extends StatelessWidget {
               style: TextButton.styleFrom(
                 padding: EdgeInsets.symmetric(
                   horizontal: defaultPadding * 1.5,
-                  vertical: defaultPadding,),
+                  vertical: defaultPadding/ ( Responsive.isMobile(context) ? 2:1),),
               ),
               onPressed: () {},
               icon: Icon(Icons.add),
