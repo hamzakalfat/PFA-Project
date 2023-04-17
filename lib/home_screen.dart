@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:untitled/controllers/menuAppController.dart';
 import 'package:untitled/screens/main/main_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,7 +24,14 @@ class _HomeScreenState extends State<HomeScreen> {
             .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
       ),
-      home:MainScreen(),
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => MenuAppController(),
+          ),
+        ],
+        child: MainScreen(),
+      ),
       );
 
   }
