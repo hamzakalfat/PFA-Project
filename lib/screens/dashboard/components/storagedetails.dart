@@ -25,18 +25,19 @@ class storagedetails extends StatelessWidget{
           Text("Storage Details",
             style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500, ),
           ),
+          SizedBox(height: defaultPadding,),
           Chart(),
           StorageInfoCard(
-            title: "plastic",
+            title: "plastic", svgSrc: '', quantity: 0,
           ),
           StorageInfoCard(
-            title: "paper",
+            title: "paper", svgSrc: '', quantity: 0,
           ),
           StorageInfoCard(
-            title: "battery",
+            title: "battery", svgSrc: '', quantity: 0,
           ),
           StorageInfoCard(
-            title: "organic matter",
+            title: "organic matter", svgSrc: '', quantity: 0,
           ),
         ],
       ),

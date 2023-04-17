@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:untitled/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled/screens/main/main_screen.dart';
@@ -22,7 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
             .apply(bodyColor: Colors.white),
         canvasColor: secondaryColor,
       ),
-      home: MainScreen(),
-    );
+      home:MainScreen(),
+      );
+
   }
 }
