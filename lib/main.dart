@@ -6,7 +6,7 @@ import 'package:untitled/constants.dart';
 import 'package:untitled/login_screen.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/foundation.dart';
-import 'package:untitled/controllers//menuController.dart' as my;
+import 'package:untitled/controllers//menuAppController.dart' as my;
 // Your code here
 
 void main() {

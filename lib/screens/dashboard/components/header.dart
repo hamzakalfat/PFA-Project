@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/responsive.dart';
-import 'package:untitled/controllers/menuController.dart' as my;
+import 'package:untitled/controllers/menuAppController.dart';
 //import 'package:flutter/src/material/menu_anchor.dart';
 
 
@@ -18,12 +18,12 @@ class  header extends StatelessWidget {
       children: [
         if (!Responsive.isDesktop(context) )
         IconButton(icon : Icon(Icons.menu),
-          onPressed: ()=> context.read<my.MenuController>().controlMenu(),
+          onPressed: context.read<MenuAppController>().controlMenu,
         ),
         if (!Responsive.isMobile(context))
         Text (
           "Dashboard",
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         if (!Responsive.isMobile(context))
         Spacer( flex:Responsive.isDesktop(context) ? 2:1,),
