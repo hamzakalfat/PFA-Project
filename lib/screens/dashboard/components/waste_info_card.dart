@@ -47,7 +47,7 @@ class wasteInfoCard  extends StatelessWidget{
           Row(
 
             children: [
-              Text("${info.quantit} waste", style: Theme.of(context).textTheme.caption?.copyWith(color: Colors.white70), )
+              Text("${info.quantity} waste", style: Theme.of(context).textTheme.caption?.copyWith(color: Colors.white70), )
             ],
           )
         ],

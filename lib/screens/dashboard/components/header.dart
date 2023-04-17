@@ -50,13 +50,19 @@ class ProfileCard extends StatelessWidget{
           border: Border.all(color: Colors.white10)),
       child: Row(
         children: [
-          Image.asset(" assets/nounou.jpeg",
-            height:38,
-          ),
+          //Image.asset(
+            //"assets/images/iStock-trash.jpg",
+            // "",
+
+            //height: 50,
+            //width: 50,
+          //),
+          SizedBox(width: 10),
+
           if ( !Responsive.isMobile(context))
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding/2),
-            child: Text("nabila taguez"),
+            child: Text("mohamed "),
           ),
           Icon(Icons.keyboard_arrow_down),
         ],
