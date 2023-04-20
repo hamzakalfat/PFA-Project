@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+//import 'package:flutter_svg/svg.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/models/Mywaste.dart';
 
@@ -29,13 +29,17 @@ class wasteInfoCard  extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: EdgeInsets.all(defaultPadding *0.75),
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(color: info.color.withOpacity(0.1),
-                    borderRadius: const BorderRadius.all(Radius.circular(10))
-                ),
-                child: SvgPicture.asset(info.svgSrc, color: info.color ,),
+                padding: EdgeInsets.all(defaultPadding*0.75 ),
+               // height: 40,
+                //width: 40,
+
+                child: //SvgPicture.asset(info.svgSrc, color: info.color ,),
+                 SizedBox(
+                   height: 40,
+                   width: 40,
+                   child: Image.asset(info.svgSrc ,
+                   ),
+                 ),
               ),
               Icon(Icons.more_vert, color: Colors.white54,),
 
@@ -47,7 +51,7 @@ class wasteInfoCard  extends StatelessWidget{
           Row(
 
             children: [
-              Text("${info.quantity} waste", style: Theme.of(context).textTheme.caption?.copyWith(color: Colors.white70), )
+              Text("${info.quantity} waste", style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white70), )
             ],
           )
         ],

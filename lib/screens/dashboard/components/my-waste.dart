@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
 import 'package:untitled/constants.dart';
 import 'package:untitled/models/Mywaste.dart';
 import 'package:untitled/responsive.dart';
+import 'package:untitled/screens/dashboard/components/add_new.dart';
 import 'package:untitled/screens/dashboard/components/waste_info_card.dart';
 
 class Mywaste extends StatelessWidget {
@@ -23,14 +24,20 @@ class Mywaste extends StatelessWidget {
             Text(" My Waste", style: Theme
                 .of(context)
                 .textTheme
-                .subtitle1,),
+                .titleMedium,),
             ElevatedButton.icon(
               style: TextButton.styleFrom(
                 padding: EdgeInsets.symmetric(
                   horizontal: defaultPadding * 1.5,
                   vertical: defaultPadding/ ( Responsive.isMobile(context) ? 2:1),),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            addnew()));
+              },
               icon: Icon(Icons.add),
               label: Text("add new"),
             ),

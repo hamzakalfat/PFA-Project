@@ -21,7 +21,7 @@ import 'package:untitled/constants.dart';
    CloudstorageInfo(
      title: "plastic",
      quantity: 000,
-     svgSrc: "assets/plastic",
+     svgSrc: "assets/images/iStock-trash.jpg",
      color: primaryColor,
      percentage: 20 ,
    ),
