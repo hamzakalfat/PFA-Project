@@ -33,7 +33,7 @@ class addnew extends  StatelessWidget {
                   width:2,
                   color: primaryColor.withOpacity(0.15)),
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.blue,
+
                     ),
                     child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -43,7 +43,7 @@ class addnew extends  StatelessWidget {
                       padding: const EdgeInsets.all(20),
                       child: Align(alignment: Alignment.topLeft,
                         child: Text(
-                          'plastic',
+                          'plastic:',
                           style: Theme.of(context).textTheme.titleLarge,
 
                         ),
@@ -51,17 +51,21 @@ class addnew extends  StatelessWidget {
 
                     ),
                   ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        LoginScreen()));
-                          },
-                          child: Icon(Icons.add),
+                        SizedBox(
+                          width: 250, // ajustez la largeur du champ de texte selon vos besoins
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              keyboardType: TextInputType.number, // pour afficher le clavier numérique
+                              decoration: InputDecoration(
+                                hintText: 'Quantity',
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
                         ),
-                  ],
+
+                      ],
                 ),
           ),
           ),
@@ -79,7 +83,7 @@ class addnew extends  StatelessWidget {
                           width:2,
                           color: primaryColor.withOpacity(0.15)),
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.blue,
+
                     ),
                     child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -89,23 +93,27 @@ class addnew extends  StatelessWidget {
                       padding: const EdgeInsets.all(20),
                       child: Align(alignment: Alignment.topLeft,
                         child: Text(
-                          'paper',
+                          'paper:',
                           style: Theme.of(context).textTheme.titleLarge,
                         ),
                       ),
 
                         ),
                         ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          LoginScreen()));
-                            },
-                            child: Icon(Icons.add),
+                          SizedBox(
+                            width: 250, // ajustez la largeur du champ de texte selon vos besoins
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: TextFormField(
+                                keyboardType: TextInputType.number, // pour afficher le clavier numérique
+                                decoration: InputDecoration(
+                                  hintText: 'Quantity',
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
                           ),
+
                         ],
                     ),
                   ),
@@ -124,7 +132,7 @@ class addnew extends  StatelessWidget {
                           width:2,
                           color: primaryColor.withOpacity(0.15)),
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.blue,
+
                     ),
                     child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -136,7 +144,7 @@ class addnew extends  StatelessWidget {
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          'battery',
+                          'battery:',
                           style: Theme.of(context).textTheme.titleLarge,
 
                         ),
@@ -144,17 +152,21 @@ class addnew extends  StatelessWidget {
 
                     ),
                   ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          LoginScreen()));
-                            },
-                            child: Icon(Icons.add),
+                          SizedBox(
+                            width: 250, // ajustez la largeur du champ de texte selon vos besoins
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: TextFormField(
+                                keyboardType: TextInputType.number, // pour afficher le clavier numérique
+                                decoration: InputDecoration(
+                                  hintText: 'Quantity',
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
                           ),
-                  ],
+
+                        ],
                 ),
                   ),
               ),
@@ -172,9 +184,9 @@ class addnew extends  StatelessWidget {
                           width:2,
                           color: primaryColor.withOpacity(0.15)),
                       borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.blue,
+
                     ),
-                    child: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    child: Row( mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                     Expanded(
                       child: Padding(
@@ -183,23 +195,27 @@ class addnew extends  StatelessWidget {
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            'organic',
+                            'organic:',
                             style: Theme.of(context).textTheme.titleLarge,
 
                           ),
                         ),
                       ),
                     ),
-                         GestureDetector(
-                          onTap: () {
-                           Navigator.push(
-                           context,
-                           MaterialPageRoute(
-                            builder: (context) =>
-                                LoginScreen()));
-                              },
-                           child: Icon(Icons.add),
+                        SizedBox(
+                          width: 250, // ajustez la largeur du champ de texte selon vos besoins
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: TextFormField(
+                              keyboardType: TextInputType.number, // pour afficher le clavier numérique
+                              decoration: InputDecoration(
+                                hintText: 'Quantity',
+                                border: OutlineInputBorder(),
                               ),
+                            ),
+                          ),
+                        ),
+
                 ],)
                   ),
                 ),
