@@ -15,10 +15,11 @@ class SideMenu extends StatelessWidget {
         child: Column(
           children: [
             DrawerHeader(
-              child: Image.asset("assets/images/iStock-trash.jpg"),
+              child: Image.asset("assets/images/zero-waste_logo_no-text-01.png"),
             ),
             DrawerListeTitle(
               title:"Dashboard",
+
               svgSrc: "assets/icons/dashboard-layout-svgrepo-com.svg",
               press: (){},
             ),

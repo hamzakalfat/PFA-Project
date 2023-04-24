@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(
                 height: 180,
                 child: Image.asset(
-                  "assets/iStock-trash.jpg",
+                  "assets/images/zero-waste_logo_no-text-01.png",
                 ),
               ),
               const SizedBox(

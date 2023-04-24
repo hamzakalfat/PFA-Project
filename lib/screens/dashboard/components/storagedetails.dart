@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:untitled/screens/dashboard/components/chart.dart';
@@ -25,18 +25,19 @@ class storagedetails extends StatelessWidget{
           Text("Storage Details",
             style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500, ),
           ),
+          SizedBox(height: defaultPadding,),
           Chart(),
           StorageInfoCard(
-            title: "plastic", svgSrc: '',
+            title: "plastic", svgSrc: 'assets/images/iStock-trash.jpg', quantity: 0,
           ),
           StorageInfoCard(
-            title: "paper", svgSrc: '',
+            title: "paper", svgSrc: 'assets/images/', quantity: 0,
           ),
           StorageInfoCard(
-            title: "battery", svgSrc: '',
+            title: "battery", svgSrc: 'assets/images/', quantity: 0,
           ),
           StorageInfoCard(
-            title: "organic matter", svgSrc: '',
+            title: "organic", svgSrc: 'assets/images/', quantity: 0,
           ),
         ],
       ),

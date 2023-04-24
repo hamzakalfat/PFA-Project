@@ -1,8 +1,13 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 import 'package:untitled/constants.dart';
+import 'package:untitled/responsive.dart';
+import 'package:untitled/controllers/menuAppController.dart';
+//import 'package:flutter/src/material/menu_anchor.dart';
+
+
 class  header extends StatelessWidget {
   const header({
    Key? key ,
@@ -11,18 +16,59 @@ class  header extends StatelessWidget {
   Widget build(BuildContext context){
     return  Row(
       children: [
+        if (!Responsive.isDesktop(context) )
+        IconButton(icon : Icon(Icons.menu),
+          onPressed: context.read<MenuAppController>().controlMenu,
+        ),
+        if (!Responsive.isMobile(context))
         Text (
           "Dashboard",
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
-        Spacer( flex:2,),
+        if (!Responsive.isMobile(context))
+        Spacer( flex:Responsive.isDesktop(context) ? 2:1,),
         Expanded(
           child: SearchField(),
         ),
+        ProfileCard(),
+
       ],
     );
   }
 }
+class ProfileCard extends StatelessWidget{
+  const ProfileCard({
+    Key?  key ,
+  }) : super ( key:key);
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      margin: EdgeInsets.only(left: defaultPadding),
+      padding: EdgeInsets.symmetric(horizontal: defaultPadding/2),
+      decoration: BoxDecoration(color: secondaryColor,
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
+          border: Border.all(color: Colors.white10)),
+      child: Row(
+        children: [
+          //Image.asset(
+            //"assets/images/iStock-trash.jpg",
+            // "",
+
+            //height: 50,
+            //width: 50,
+          //),
+          SizedBox(width: 10),
+
+          if ( !Responsive.isMobile(context))
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding/2),
+            child: Text("mohamed "),
+          ),
+          Icon(Icons.keyboard_arrow_down),
+        ],
+      ),
+    );
+  }}
 
 class  SearchField extends StatelessWidget {
   const SearchField({
@@ -51,7 +97,8 @@ class  SearchField extends StatelessWidget {
               borderRadius:
               const BorderRadius.all(Radius.circular(10)),
             ),
-            child: SvgPicture.asset ("assets/icons/search-right-1507-svgrepo-com.svg"),
+            child: Icon(Icons.search),
+            // SvgPicture.asset ("assets/icons/search-right-1507-svgrepo-com.svg"),
           ),
         ),
 

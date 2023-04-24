@@ -1,6 +1,7 @@
                                                                                   // ignore_for_file: prefer_const_constructors
 
-                                                                                  import 'package:untitled/home_screen.dart';
+                                                                                  import 'package:untitled/constants.dart';
+import 'package:untitled/home_screen.dart';
 import 'package:untitled/login_screen.dart';
 import 'package:flutter/material.dart';
 class RegistrationScreen extends StatefulWidget {
@@ -16,6 +17,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        backgroundColor: bgColor,
         title: Text("Registration Screen"),
       ),
       body: Center(
@@ -24,9 +26,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           child: Column(
             children: [
               SizedBox(
-                height: 100,
+                height: 180,
                 child: Image.asset(
-                  "assets/iStock-trash.jpg",
+                  "assets/images/zero-waste_logo_no-text-01.png",
                 ),
               ),
               const SizedBox(
